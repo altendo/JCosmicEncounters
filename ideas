@@ -1,1 +1,3 @@
 do we want to just have data files to dynamically create the different race information, or just hardcode everything into race-specifc class files.
+
+I was thinking hardcoding race classes, but it's hard to make a race superclass since each race is different. -P
