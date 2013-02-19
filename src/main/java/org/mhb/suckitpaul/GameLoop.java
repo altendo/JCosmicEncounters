@@ -1,3 +1,5 @@
+package org.mhb.suckitpaul;
+
 class GameLoop
 {
     enum gamePhases {
@@ -15,5 +17,10 @@ class GameLoop
         while (true)
             {
             }
+    }
+    
+    public static boolean functotest()
+    {
+    	return true;
     }
 }
