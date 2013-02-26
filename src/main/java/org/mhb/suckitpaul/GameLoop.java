@@ -14,7 +14,7 @@ class GameLoop
    *
    */
   enum gamePhase {
-    Regroup(new org.mhb.suckitpaul.gamephases.Regroup()), Destiny(new GamePhase()),
+    Regroup(new Regroup()), Destiny(new GamePhase()),
     Launch(new GamePhase()), Alliance(new GamePhase()),
     Planning(new GamePhase()), Reveal(new GamePhase()), Resolution(new GamePhase());
     
