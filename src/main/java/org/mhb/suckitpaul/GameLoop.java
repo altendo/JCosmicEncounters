@@ -5,6 +5,14 @@ import org.mhb.suckitpaul.gamephases.Regroup;
 
 class GameLoop
 {
+  /**
+   * enum representing the phases of the game.
+   * alternately, we could use an array of phase objects directly,
+   * or more directly implement the phases in the enum,
+   * perhaps as a separate class itself.
+   * @author Morgan Bauer
+   *
+   */
   enum gamePhase {
     Regroup(new org.mhb.suckitpaul.gamephases.Regroup()), Destiny(new GamePhase()),
     Launch(new GamePhase()), Alliance(new GamePhase()),
