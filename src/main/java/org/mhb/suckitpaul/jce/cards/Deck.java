@@ -1,5 +1,6 @@
 package org.mhb.suckitpaul.jce.cards;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,8 +22,8 @@ public class Deck {
   /**
    * Shuffle the deck that this is called on.
    */
-  public static void shuffle()
+  public void shuffle()
   {
-    // Collections.swap(deckCards, i, j);
+    Collections.shuffle(deckCards);
   }
 }
