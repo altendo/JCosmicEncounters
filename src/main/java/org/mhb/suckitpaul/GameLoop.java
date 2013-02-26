@@ -1,9 +1,24 @@
 package org.mhb.suckitpaul;
 
+import org.mhb.suckitpaul.gamephases.GamePhase;
+import org.mhb.suckitpaul.gamephases.Regroup;
+
 class GameLoop
 {
   enum gamePhase {
-    Regroup, Destiny, Launch, Alliance, Planning, Reveal, Resolution,
+    Regroup(new org.mhb.suckitpaul.gamephases.Regroup()), Destiny(new GamePhase()),
+    Launch(new GamePhase()), Alliance(new GamePhase()),
+    Planning(new GamePhase()), Reveal(new GamePhase()), Resolution(new GamePhase());
+    
+    private GamePhase gp;
+    private gamePhase(GamePhase gp)
+    {
+      this.gp = gp;
+    }
+    public void doit ()
+    {
+      gp.performPhase();
+    }
   };
   // 50 aliens
   // 20 destiny cards
@@ -50,6 +65,8 @@ class GameLoop
         // e.g. in gamephases package
         for (gamePhase gp : gamePhase.values())
         {
+          gp.doit();
+          // alternate
           if (gp == gamePhase.Regroup)
           {
             // current player gets a ship from the warp
