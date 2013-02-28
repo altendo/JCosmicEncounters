@@ -17,8 +17,10 @@ public class Deck {
    * container for the cards in the deck
    * ordered, so chose list as base
    * probably the actual instantiation is arraylist
+   * 
+   * maybe make an accessor for deckCards
    */
-  private List<Card> deckCards;
+  protected List<Card> deckCards;
   /**
    * Shuffle the deck that this is called on.
    */
