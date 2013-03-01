@@ -14,6 +14,13 @@ public class Player {
     planets = new Planet[numPlanets];
   }
   /**
-   * initialize Planet array
+   * initialize Planet array in constructor
    */
+  public Player()
+  {
+    for (Planet p : planets)
+    {
+      p = new Planet(this);
+    }
+  }
 }
