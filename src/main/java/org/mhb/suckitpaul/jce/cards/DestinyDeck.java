@@ -15,6 +15,7 @@ public class DestinyDeck extends Deck {
     {
       for (int i =0;i<4;i++)
       {
+        // maybe use an accessor for deckCards
           deckCards.add(new DestinyCard(p));
       }
     }
