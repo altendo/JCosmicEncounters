@@ -52,12 +52,18 @@ class GameLoop
     System.out.print("\n There are " + numPlayers + " players.");
     // allocate players
     players = new Player [numPlayers];
+    for(Player p : players)
+    {
+      p = new Player();
+    }
     // five planets per player
     // initialize player planets
     // four ships per planet (20 total)
     // initialize player ships
     // initialize the decks
     // initialize the hands of the players
+    // initialize the warp
+    Planet warp = new Planet();
     while (true)
     {
       for (Player p : players) // go through players in order, if we ever shuffle the order, break out and loop around
@@ -81,6 +87,7 @@ class GameLoop
           }
         }
       }
+      break; // TODO temporary so this executes and dies
     }
   }
 
