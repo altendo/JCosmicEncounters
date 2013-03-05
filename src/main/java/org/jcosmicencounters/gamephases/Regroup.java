@@ -1,5 +1,6 @@
-package org.mhb.suckitpaul.gamephases;
+package org.jcosmicencounters.gamephases;
 
-public class Regroup extends GamePhase {
+public class Regroup extends GamePhase
+{
 
 }

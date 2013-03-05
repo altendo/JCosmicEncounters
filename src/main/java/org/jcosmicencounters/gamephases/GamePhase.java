@@ -1,6 +1,8 @@
-package org.mhb.suckitpaul.gamephases;
+package org.jcosmicencounters.gamephases;
 
-public class GamePhase {
+public class GamePhase
+{
+
   public void performPhase()
   {
     

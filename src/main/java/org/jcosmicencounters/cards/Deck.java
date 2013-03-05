@@ -1,4 +1,4 @@
-package org.mhb.suckitpaul.jce.cards;
+package org.jcosmicencounters.cards;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,7 +11,8 @@ import java.util.List;
  * @author Morgan Bauer
  *
  */
-public class Deck {
+public class Deck
+{
 
   /**
    * container for the cards in the deck
@@ -28,4 +29,5 @@ public class Deck {
   {
     Collections.shuffle(deckCards);
   }
+
 }

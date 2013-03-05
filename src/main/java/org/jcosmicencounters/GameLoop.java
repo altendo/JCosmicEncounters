@@ -1,10 +1,11 @@
-package org.mhb.suckitpaul;
+package org.jcosmicencounters;
 
-import org.mhb.suckitpaul.gamephases.GamePhase;
-import org.mhb.suckitpaul.gamephases.Regroup;
+import org.jcosmicencounters.gamephases.GamePhase;
+import org.jcosmicencounters.gamephases.Regroup;
 
 class GameLoop
 {
+
   /**
    * enum representing the phases of the game.
    * alternately, we could use an array of phase objects directly,
@@ -13,20 +14,24 @@ class GameLoop
    * @author Morgan Bauer
    *
    */
-  enum gamePhase {
+  enum gamePhase
+  {
     Regroup(new Regroup()), Destiny(new GamePhase()),
     Launch(new GamePhase()), Alliance(new GamePhase()),
     Planning(new GamePhase()), Reveal(new GamePhase()), Resolution(new GamePhase());
     
     private GamePhase gp;
+
     private gamePhase(GamePhase gp)
     {
       this.gp = gp;
     }
+
     public void doit ()
     {
       gp.performPhase();
     }
+
   };
   // 50 aliens
   // 20 destiny cards
@@ -43,6 +48,7 @@ class GameLoop
 
   public static void main(String[] a)
   {
+
     // player array, in order
     Player [] players; // local var for now, while we get things in order, better than it being static
 
@@ -50,12 +56,13 @@ class GameLoop
     System.out.print("How many players are there? ");
     int numPlayers = 5;
     System.out.print("\n There are " + numPlayers + " players.");
+
     // allocate players
     players = new Player [numPlayers];
-    for(Player p : players)
-    {
+    for(Player p : players) {
       p = new Player();
     }
+
     // five planets per player
     // initialize player planets
     // four ships per planet (20 total)
@@ -64,35 +71,37 @@ class GameLoop
     // initialize the hands of the players
     // initialize the warp
     Planet warp = new Planet();
-    while (true)
-    {
-      for (Player p : players) // go through players in order, if we ever shuffle the order, break out and loop around
+    while (true) {
+
+      for (Player p : players) {// go through players in order, if we ever shuffle the order, break out and loop around
         // for each loop allows us to switch containers at a later point
         // maybe catch either the concurrent modification exception or
         // throw one of our own indicating a PlayersChangedOrder exception
-      {
         // this inner loop is fucking awful.
         // I think it needs to be switch to some more OO type thing,
         // a sort of gamephase visitor type thing
         // IDEA: maybe we have each gamephase as an actual class, and then
         // do something like gamephase.performphase(), etc.
         // e.g. in gamephases package
-        for (gamePhase gp : gamePhase.values())
-        {
+        for (gamePhase gp : gamePhase.values()) {
           gp.doit();
           // alternate
-          if (gp == gamePhase.Regroup)
-          {
+          if (gp == gamePhase.Regroup) {
             // current player gets a ship from the warp
           }
         }
+
       }
+
       break; // TODO temporary so this executes and dies
+
     }
+
   }
 
   public static boolean functotest()
   {
     return true;
   }
+
 }

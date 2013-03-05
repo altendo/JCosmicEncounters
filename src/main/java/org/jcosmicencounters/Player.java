@@ -1,6 +1,8 @@
-package org.mhb.suckitpaul;
+package org.jcosmicencounters;
 
-public class Player {
+public class Player
+{
+
 /**
  * Planet array for the players planets
  */
@@ -13,14 +15,15 @@ public class Player {
   {
     planets = new Planet[numPlanets];
   }
+
   /**
    * initialize Planet array in constructor
    */
   public Player()
   {
-    for (Planet p : planets)
-    {
+    for (Planet p : planets) {
       p = new Planet(this);
     }
   }
+
 }
