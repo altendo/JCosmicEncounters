@@ -1,20 +1,39 @@
 package org.jcosmicencounters.cards;
 
-import org.jcosmicencounters.Player;
-
 public class DestinyCard extends Card
 {
 
-  private Player p;
-  
-  public enum DestinyCardType 
+  private String description;
+  private DestinyCardType type;
+  private Condition condition;
+
+  public DestinyCard(String description, DestinyCardType type)
   {
-    Colored, Wild, Special;
+    this.description = description;
+    this.type = type;
+    this.condition = null;
   }
-  
-  public DestinyCard(Player p)
+
+  public DestinyCard(String description, DestinyCardType type, Condition condition)
   {
-    this.p = p;
+    this.description = description;
+    this.type = type;
+    this.condition = condition;
+  }
+
+  public Condition getCondition()
+  {
+    return this.condition;
+  }
+
+  public String getDescription()
+  {
+    return this.description;
+  }
+
+  public DestinyCardType getDestinyCardType()
+  {
+    return this.type;
   }
 
 }
