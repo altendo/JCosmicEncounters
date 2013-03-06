@@ -1,4 +1,4 @@
-package org.mhb.suckitpaul;
+package org.jcosmicencounters;
 
 import static org.junit.Assert.*;
 

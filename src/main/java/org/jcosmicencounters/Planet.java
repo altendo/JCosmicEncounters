@@ -1,13 +1,16 @@
-package org.mhb.suckitpaul;
+package org.jcosmicencounters;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Planet {
+public class Planet
+{
+
 /**
  * suggest map of players to number of ships they have on a planet
  */
   private Map<Player, Integer> occupiers = new HashMap<>();
+
   /**
    * Constructors
    */
@@ -18,6 +21,7 @@ public class Planet {
   {
     
   }
+
   /**
    * The player to 
    * @param p
@@ -26,6 +30,7 @@ public class Planet {
   {
     occupiers.put(p, 4);
   }
+
   /**
    * The player to create the given number of planets for.
    * @param p
@@ -35,4 +40,5 @@ public class Planet {
   {
     occupiers.put(p, startingPresence);
   }
+
 }
