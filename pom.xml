@@ -3,12 +3,12 @@
 	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>jce</groupId>
-  <artifactId>jce</artifactId>
+  <groupId>jcosmicencounter</groupId>
+  <artifactId>jcosmicencounte</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>jce</name>
+  <name>jcosmicencounter</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -42,7 +42,7 @@
 	  </descriptorRefs>
 	  <archive>
 	    <manifest>
-	      <mainClass>org.mhb.suckitpaul.GameLoop</mainClass>
+	      <mainClass>org.jcosmicencounters.GameLoop</mainClass>
 	    </manifest>
 	  </archive>
 	</configuration>
