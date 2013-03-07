@@ -1,6 +1,41 @@
+For this project we will use standard Java coding standards
+(http://www.oracle.com/technetwork/java/codeconv-138413.html). We aren't going
+to be coding standard nazis, so they aren't strictly enforceable, but effort
+should be made to stick to it.
 
+The following is a gist of the standard:
 
-* Nick's Crap
-I prefer camelcase for class and method declarations, but inline for everything else.
-* Morgan's Suggested
-No trailing whitespace.
+* Only initialize one variable per line.
+* There should be a space between a control structure and its associated
+  parentheses. (ie, if (true), not if(true)).
+* Braces are opened on the same line as the class, method, or control structure,
+  and closed on a new line. Example:
+
+  class MyClass {
+
+  }
+
+  if (true) {
+
+  }
+* ALWAYS use braces with if.
+* For if and try/catch, use the following system:
+
+  if (bool1) {
+
+  } else if (bool2) {
+
+  } else {
+
+  }
+
+  try {
+
+  } catch (Exception e) {
+
+  }
+* 80 characters per line.
+
+Additional considerations:
+* 4 spaces for indentation. NO TABS. Nick will kill over this so don't do it.
+* No trailing whitespace, this will piss off Morgan.
