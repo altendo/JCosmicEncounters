@@ -1,0 +1,6 @@
+
+
+* Nick's Crap
+I prefer camelcase for class and method declarations, but inline for everything else.
+* Morgan's Suggested
+No trailing whitespace.
