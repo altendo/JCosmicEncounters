@@ -39,3 +39,5 @@ The following is a gist of the standard:
 Additional considerations:
 * 4 spaces for indentation. NO TABS. Nick will kill over this so don't do it.
 * No trailing whitespace, this will piss off Morgan.
+
+AND IF YOU BREAK THE BUILD AND CHECK IT IN.........
