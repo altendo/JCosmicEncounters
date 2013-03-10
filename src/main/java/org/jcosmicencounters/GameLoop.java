@@ -19,7 +19,7 @@ class GameLoop
     Regroup(new Regroup()), Destiny(new GamePhase()),
     Launch(new GamePhase()), Alliance(new GamePhase()),
     Planning(new GamePhase()), Reveal(new GamePhase()), Resolution(new GamePhase());
-    
+
     private GamePhase gp;
 
     private gamePhase(GamePhase gp)
@@ -84,17 +84,16 @@ class GameLoop
         // do something like gamephase.performphase(), etc.
         // e.g. in gamephases package
         for (gamePhase gp : gamePhase.values()) {
-          gp.doit();
+            // "activate" a players special ability if it can be used in the phase, maybe move this inside of phe phase running
+            gp.doit(); // OO way of performing a phase
           // alternate
-          if (gp == gamePhase.Regroup) {
+            if (gp == gamePhase.Regroup) { // explicit check for current phase
             // current player gets a ship from the warp
           }
         }
-
       }
 
       break; // TODO temporary so this executes and dies
-
     }
 
   }
