@@ -71,12 +71,15 @@ class GameLoop
     // initialize the hands of the players
     // initialize the warp
     Planet warp = new Planet();
-    while (true) {
-
+    while (true)
+        {
       for (Player p : players) {// go through players in order, if we ever shuffle the order, break out and loop around
         // for each loop allows us to switch containers at a later point
         // maybe catch either the concurrent modification exception or
         // throw one of our own indicating a PlayersChangedOrder exception
+          // I also forgot that we can run through the phases more than once for a player (three times, I think), so we might have to have an extra loop surrounding the gamephase loop
+          for (playerTurn = 0; playerTurn < 3; ++playerTurn)
+              {
         // this inner loop is fucking awful.
         // I think it needs to be switch to some more OO type thing,
         // a sort of gamephase visitor type thing
@@ -91,6 +94,7 @@ class GameLoop
             // current player gets a ship from the warp
           }
         }
+      }
       }
 
       break; // TODO temporary so this executes and dies
