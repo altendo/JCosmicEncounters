@@ -85,7 +85,7 @@ class GameLoop
         // maybe catch either the concurrent modification exception or
         // throw one of our own indicating a PlayersChangedOrder exception
           // I also forgot that we can run through the phases more than once for a player (three times, I think), so we might have to have an extra loop surrounding the gamephase loop
-          for (playerTurn = 0; playerTurn < 3; ++playerTurn)
+          for (int playerTurn = 0; playerTurn < 3; ++playerTurn)
               {
         // this inner loop is fucking awful.
         // I think it needs to be switch to some more OO type thing,

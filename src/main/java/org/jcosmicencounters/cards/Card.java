@@ -1,6 +1,5 @@
 package org.jcosmicencounters.cards;
 
-public class Card
-{
+public class Card {
 
 }

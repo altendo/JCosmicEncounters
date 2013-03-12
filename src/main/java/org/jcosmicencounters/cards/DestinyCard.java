@@ -1,39 +1,36 @@
 package org.jcosmicencounters.cards;
 
-public class DestinyCard extends Card
-{
+import org.jcosmicencounters.Player;
 
-  private String description;
-  private DestinyCardType type;
-  private Condition condition;
+public class DestinyCard extends Card {
 
-  public DestinyCard(String description, DestinyCardType type)
-  {
-    this.description = description;
-    this.type = type;
-    this.condition = null;
-  }
+    private DestinyCardType type;
+    private Player player;
+    private String description;
 
-  public DestinyCard(String description, DestinyCardType type, Condition condition)
-  {
-    this.description = description;
-    this.type = type;
-    this.condition = condition;
-  }
+    public DestinyCard(DestinyCardType type, String description) {
+        this.description = description;
+        this.type = type;
+        this.player = null;
+    }
 
-  public Condition getCondition()
-  {
-    return this.condition;
-  }
+    public DestinyCard(DestinyCardType type, String description, Player player) {
+        this.description = description;
+        this.type = type;
+        this.player = player;
+    }
 
-  public String getDescription()
-  {
-    return this.description;
-  }
+    public String getDescription() {
+        return this.description;
+    }
 
-  public DestinyCardType getDestinyCardType()
-  {
-    return this.type;
-  }
+    public DestinyCardType getDestinyCardType() {
+        return this.type;
+    }
+
+
+    public void playCard() {
+
+    }
 
 }
