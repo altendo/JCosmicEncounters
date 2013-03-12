@@ -62,14 +62,21 @@ class GameLoop
     for(Player p : players) {
       p = new Player();
     }
-
+    // arrange players according to how they want to be arranged
+    //  around a virtual table, etc.
     // five planets per player
+    // initialize the warp
     // initialize player planets
     // four ships per planet (20 total)
     // initialize player ships
     // initialize the decks
+    //  initialize Destiny Deck
+    //  shuffle flairs and deal to players for their alien choice
+    //  put the flairs in, and top off so that there are exactly 10
     // initialize the hands of the players
-    // initialize the warp
+    // select first player using the Destiny Deck
+    //  re-initialize Destiny Deck
+
     Planet warp = new Planet();
     while (true)
         {
